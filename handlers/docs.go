@@ -77,7 +77,7 @@ type updateAccountParamsWrapper struct {
 }
 
 // swagger:parameters updatePassword
-type updateAccountParamsWrapper struct {
+type updatePasswordParamsWrapper struct {
 	// Account data structure to Update.
 	// Note: New password is required to be sent with the post request along with the old Password.
 	// in: body
