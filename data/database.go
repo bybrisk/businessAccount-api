@@ -112,7 +112,7 @@ func updatePassword(account *UpdatePasswordRequest) int64 {
 
 func getPassword (docID string) string {
 	type password struct {
-		getPassword string `json:"password"`
+		Password string `json:"password"`
 	}
 	var pass *password
 
@@ -124,6 +124,6 @@ func getPassword (docID string) string {
 		log.Error("getPassword ERROR:")
 		log.Error(err)
 	}
-	fmt.Println(pass.getPassword)
-	return pass.getPassword
+	fmt.Println(pass.Password)
+	return pass.Password
 }
