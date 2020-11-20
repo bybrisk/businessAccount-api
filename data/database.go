@@ -124,6 +124,5 @@ func getPassword (docID string) string {
 		log.Error("getPassword ERROR:")
 		log.Error(err)
 	}
-	fmt.Println(pass.Password)
 	return pass.Password
 }

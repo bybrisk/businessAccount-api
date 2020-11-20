@@ -1,7 +1,5 @@
 package data
 
-import "fmt"
-
 func GetData (docID string) *BusinessAccountResponse {
 	account := getBusinessAccount(docID)
 	return account
@@ -47,7 +45,6 @@ func UpdatePassword (d *UpdatePasswordRequest) *BusinessAccountPostSuccess {
 	var response BusinessAccountPostSuccess
 
 	password:= getPassword(d.BybID)
-	fmt.Println(password)
 	if password==d.OldPassword {
 		res := updatePassword(d)
 		//sending response
