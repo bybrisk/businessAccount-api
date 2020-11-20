@@ -114,7 +114,7 @@ func getPassword (docID string) string {
 	type password struct {
 		getPassword string `json:"password"`
 	}
-	var pass password
+	var pass *password
 
 	collectionName := shashankMongo.DatabaseName.Collection("businessAccounts")
 	id, _ := primitive.ObjectIDFromHex(docID)
@@ -124,6 +124,5 @@ func getPassword (docID string) string {
 		log.Error("getPassword ERROR:")
 		log.Error(err)
 	}
-
 	return pass.getPassword
 }
