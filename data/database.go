@@ -95,3 +95,35 @@ func updateBusinessAccount(account *UpdateBusinessAccountRequest) int64 {
 	}
 	return updateResult.ModifiedCount
 }
+
+func updatePassword(account *UpdatePasswordRequest) int64 {
+	collectionName := shashankMongo.DatabaseName.Collection("businessAccounts")
+	id, _ := primitive.ObjectIDFromHex(account.BybID)
+	update := bson.M{"$set":bson.M{"password": account.NewPassword}}
+	filter := bson.M{"_id": id}
+	res,err := collectionName.UpdateOne(shashankMongo.CtxForDB,filter, update)
+	if err!=nil{
+		log.Error("updateBusinessAccount ERROR:")
+		log.Error(err)
+		}	
+	
+	return res.ModifiedCount
+}
+
+func getPassword (docID string) string {
+	type password struct {
+		getPassword string `json:"password"`
+	}
+	var pass password
+
+	collectionName := shashankMongo.DatabaseName.Collection("businessAccounts")
+	id, _ := primitive.ObjectIDFromHex(docID)
+	filter := bson.M{"_id": id}
+    err:= collectionName.FindOne(shashankMongo.CtxForDB, filter).Decode(&pass)
+	if err != nil {
+		log.Error("getPassword ERROR:")
+		log.Error(err)
+	}
+
+	return pass.getPassword
+}

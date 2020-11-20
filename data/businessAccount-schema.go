@@ -15,6 +15,13 @@ type BusinessAccountRequest struct{
 	BusinessPlan string `json: "businessplan" validate:"required"`
 }
 
+//post update password
+type UpdatePasswordRequest struct {
+	BybID string `json:"bybID" validate:"required"`
+	OldPassword string `json:"oldPassword" validate:"required"`
+	NewPassword string `json:"newPassword" validate:"required"`
+}
+
 //update request
 type UpdateBusinessAccountRequest struct{
 	BybID string `json: "bybID" validate:"required"`
@@ -49,6 +56,11 @@ func (d *BusinessAccountRequest) Validate() error {
 }
 
 func (d *UpdateBusinessAccountRequest) ValidateUpdateRequest() error {
+	validate := validator.New()
+	return validate.Struct(d)
+}
+
+func (d *UpdatePasswordRequest) ValidateUpdatePasswordRequest() error {
 	validate := validator.New()
 	return validate.Struct(d)
 }

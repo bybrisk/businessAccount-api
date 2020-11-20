@@ -40,3 +40,27 @@ func UpdateData (d *UpdateBusinessAccountRequest) *BusinessAccountPostSuccess {
 	return &response
 
 }
+
+func UpdatePassword (d *UpdatePasswordRequest) *BusinessAccountPostSuccess {
+	var response BusinessAccountPostSuccess
+
+	password:= getPassword(d.BybID)
+	if password==d.OldPassword {
+		res := updatePassword(d)
+		//sending response
+		if res == 1 {
+		response = BusinessAccountPostSuccess{
+			BybID: d.BybID,
+			Message: "Password updated Successfully",
+			}
+		}
+	}else {
+		response = BusinessAccountPostSuccess{
+			BybID: d.BybID,
+			Message: "Authentication denied!",
+		}
+	}
+
+	return &response
+
+}

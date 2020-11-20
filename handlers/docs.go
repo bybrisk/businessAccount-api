@@ -76,6 +76,15 @@ type updateAccountParamsWrapper struct {
 	Body data.UpdateBusinessAccountRequest
 }
 
+// swagger:parameters updatePassword
+type updateAccountParamsWrapper struct {
+	// Account data structure to Update.
+	// Note: New password is required to be sent with the post request along with the old Password.
+	// in: body
+	// required: true
+	Body data.UpdatePasswordRequest
+}
+
 // swagger:parameters getBusinessAccount
 type productIDParamsWrapper struct {
 	// The bybID of the Business Account 
