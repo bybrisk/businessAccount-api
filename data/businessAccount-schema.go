@@ -5,13 +5,53 @@ import (
 	"github.com/bybrisk/structs"
 )
 
-//post request
+// BusinessAccountRequest defines the structure for an API BusinessAccount
+// swagger:model
 type BusinessAccountRequest struct{
+	// The url of the profile pic for this Account
+	//
+	// required: false
+	// max length: 1000
 	PicURL string `json: "picurl"`
+	// The Username for this account
+	//
+	// required: true
+	// max length: 1000
 	UserName string `json: "username" validate:"required"`
+	// The email Id associated with this account
+	//
+	// required: true
+	// example: user@provider.com
+	Email string `json: "email" validate:"required"`
+	// Name of the business this account is for
+	//
+	// required: true
+	// max length: 1000
 	BusinessName string `json: "businessname" validate:"required"`
+	// Category the business belongs to
+	//
+	// required: true
+	// max length: 1000
+	BusinessCategory string `json: "businessCat" validate:"required"`
+	// Password for the account
+	//
+	// required: true
+	// max length: 100
 	Password string `json: "password" validate:"required"` //custom requirement
-	City string `json: "city" validate:"required"`
+	// Address of the business associated with the account
+	//
+	// required: true
+	// max length: 10000
+	Address string `json: "address" validate:"required"`
+	// Type of delivery the business requires
+	//
+	// required: true
+	// example: Self Delivery or Bybrisk Delivery
+	DeliveryConfig structs.DeliveryConfig `json: "deliveryConfig" validate:"required"`
+	// Business plan ID
+	//
+	// required: true
+	// example: 1, 2, 3 or 4	
 	BusinessPlan string `json: "businessplan" validate:"required"`
 }
 
@@ -27,21 +67,26 @@ type UpdateBusinessAccountRequest struct{
 	BybID string `json: "bybID" validate:"required"`
 	PicURL string `json: "picurl" validate:"required"`
 	UserName string `json: "username" validate:"required"`
+	Email string `json: "email" validate:"required"`
 	BusinessName string `json: "businessname" validate:"required"`
-	City string `json: "city" validate:"required"`
+	Address string `json: "address" validate:"required"`
+	DeliveryConfig structs.DeliveryConfig `json: "deliveryConfig" validate:"required"`
 }
 
 //get response
 type BusinessAccountResponse struct{
 	PicURL string `json: "picurl"`
 	UserName string `json: "username"`
+	Email string `json: "email"`
 	BusinessName string `json: "businessname"`
-	City string `json: "city"`
+	BusinessCategory string `json: "businessCat"`
+	Address string `json: "address"`
 	BusinessPlan string `json: "businessplan"`
 	ProfileConfig structs.ProfileConfig `json:"profileConfiguration"`
 	DeliveryPending string `json: "deliveryPending"`
 	DeliveryDelivered string `json: "deliveryDelivered"`
 	UserID string `json:"bybID"`
+	DeliveryConfig structs.DeliveryConfig `json: "deliveryConfig"`
 }
 
 //post response
