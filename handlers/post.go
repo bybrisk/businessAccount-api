@@ -16,6 +16,8 @@ import (
 //  501: errorResponse
 
 func (p *Account) AddNewAccount (w http.ResponseWriter, r *http.Request){
+	enableCORS(&w)
+
 	p.l.Println("Handle POST request -> businessAccount-api Module")
 	account := &data.BusinessAccountRequest{}
 
@@ -40,4 +42,9 @@ func (p *Account) AddNewAccount (w http.ResponseWriter, r *http.Request){
 	if err!=nil {
 		http.Error(w,"Data with ID failed to marshel",http.StatusInternalServerError)		
 	}
+}
+
+//allow CORS request
+func enableCORS (w *http.ResponseWriter) {
+	(*w).Header().Set("Access-Control-Allow-Origin","*")
 }
