@@ -13,7 +13,7 @@ func AddData (d *BusinessAccountRequest) *BusinessAccountPostSuccess{
 	res:=getProfileConfig(d)
 	_ = setProfileConfig(res,id)
 
-	//set deliveryPending and deliveryDelivered
+	//set deliveryPending, deliveryDelivered, deliveryCancelled and deliveryTransit
 	_ = setDeliveryStats(id)
 
 	//sending response

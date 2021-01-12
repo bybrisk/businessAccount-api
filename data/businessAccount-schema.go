@@ -85,6 +85,8 @@ type BusinessAccountResponse struct{
 	ProfileConfig structs.ProfileConfig `json:"profileConfiguration"`
 	DeliveryPending string `json: "deliveryPending"`
 	DeliveryDelivered string `json: "deliveryDelivered"`
+	DeliveryCancelled string `json: "deliveryCancelled"`
+	DeliveryTransit string `json: "deliveryTransit"`
 	UserID string `json:"bybID"`
 	DeliveryConfig structs.DeliveryConfig `json: "deliveryConfig"`
 }

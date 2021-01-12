@@ -1,6 +1,6 @@
 module github.com/bybrisk/businessAccount-api/data
 
-go 1.12
+go 1.15
 
 require (
 	github.com/bybrisk/structs v0.0.0-20201207083216-d57fcf773d00
