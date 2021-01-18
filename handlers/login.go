@@ -43,8 +43,3 @@ func (p *Account) GetAccountID (w http.ResponseWriter, r *http.Request){
 		http.Error(w,"Data with ID failed to marshel",http.StatusInternalServerError)		
 	}
 }
-
-//allow CORS request
-func enableCORS (w *http.ResponseWriter) {
-	(*w).Header().Set("Access-Control-Allow-Origin","*")
-}

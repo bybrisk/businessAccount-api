@@ -1,7 +1,8 @@
 github.com/BurntSushi/toml v0.3.1/go.mod h1:xHWCNGjB5oqiDr8zfno3MHue2Ht5sIBksp03qcyfWMU=
 github.com/aws/aws-sdk-go v1.34.28/go.mod h1:H7NKnBqNVzoTJpGfLrQkkD+ytBA93eiDYi/+8rV9s48=
-github.com/bybrisk/businessAccount-api/data v0.0.0-20210112155328-def124abe06c h1:IbRIK8YtWox6ZROr0rgKm0guBRMt37ikhL84hF6KQ6E=
-github.com/bybrisk/businessAccount-api/data v0.0.0-20210112155328-def124abe06c/go.mod h1:0Qv+4SjynF/clO+n8RHeWmOprqKn+ykDh/pZVMjMibQ=
+github.com/bybrisk/businessAccount-api v0.0.0-20210118090426-f9216cb655ec h1:xtlrm6TurDt6CpTnN04JY6EJPmjgyr/GunSSsUNd8xY=
+github.com/bybrisk/businessAccount-api/data v0.0.0-20210118090426-f9216cb655ec h1:iyQuLEUMyTdKzNXFeX2/QatuIC5bMBRSe65MZ1InCX8=
+github.com/bybrisk/businessAccount-api/data v0.0.0-20210118090426-f9216cb655ec/go.mod h1:lnNfFjJ6ME2YITADDqcCwyEyDqAzXULzd2A5XU+AvJE=
 github.com/bybrisk/structs v0.0.0-20201109044720-899a1e012b8c/go.mod h1:+ozPcEcgRTvbDXzFyBlUTgv1G2niBpEsIzF5tySMIck=
 github.com/bybrisk/structs v0.0.0-20201207083216-d57fcf773d00/go.mod h1:Gl0qfijpVNzy02fq2+ctxg2KmXXqjYn9g/oSTLQwvR8=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
@@ -52,6 +53,8 @@ github.com/kr/pretty v0.1.0/go.mod h1:dAy3ld7l9f0ibDNOQOHHMYYIIbhfbHSm3C4ZsoJORN
 github.com/kr/pty v1.1.1/go.mod h1:pFQYn66WHrOpPYNljwOMqo10TkYh1fy3cYio2l3bCsQ=
 github.com/kr/text v0.1.0/go.mod h1:4Jbv+DJW3UT/LiOwJeYQe1efqtUx/iVham/4vfdArNI=
 github.com/leodido/go-urn v1.2.0/go.mod h1:+8+nEpDfqqsY+g338gtMEUOtuK+4dEMhiQEgxpxOKII=
+github.com/lib/pq v1.9.0 h1:L8nSXQQzAYByakOFMTwpjRoHsMJklur4Gi59b6VivR8=
+github.com/lib/pq v1.9.0/go.mod h1:AlVN5x4E4T544tWzH6hKfbfQvm3HdbOxrmggDNAPY9o=
 github.com/markbates/oncer v0.0.0-20181203154359-bf2de49a0be2/go.mod h1:Ld9puTsIW75CHf65OeIOkyKbteujpZVXDpWK6YGZbxE=
 github.com/markbates/safe v1.0.1/go.mod h1:nAqgmRi7cY2nqMc92/bSEeQA+R4OheNU2T1kNSCBdG0=
 github.com/montanaflynn/stats v0.0.0-20171201202039-1bf9dbcd8cbe/go.mod h1:wL8QJuTMNUDYhXwkmfOly8iTdp5TEcJFWZD2D7SIkUc=
