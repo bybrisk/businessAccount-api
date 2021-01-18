@@ -65,7 +65,7 @@ type UpdatePasswordRequest struct {
 //update request
 type UpdateBusinessAccountRequest struct{
 	BybID string `json: "bybID" validate:"required"`
-	PicURL string `json: "picurl" validate:"required"`
+	PicURL string `json: "picurl"`
 	UserName string `json: "username" validate:"required"`
 	Email string `json: "email" validate:"required"`
 	BusinessName string `json: "businessname" validate:"required"`
