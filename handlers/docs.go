@@ -85,6 +85,15 @@ type updatePasswordParamsWrapper struct {
 	Body data.UpdatePasswordRequest
 }
 
+// swagger:parameters getBybID
+type getAccountIDParamsWrapper struct {
+	// Data structure to get account ID (BybID)
+	// Note: a lookup table finds the BybID against a password and username.
+	// in: body
+	// required: true
+	Body data.PasswordAndUsername
+}
+
 // swagger:parameters getBusinessAccount
 type productIDParamsWrapper struct {
 	// The bybID of the Business Account 

@@ -2,6 +2,7 @@ package data_test
 
 import (
 	"testing"
+	"fmt"
 	//"github.com/go-playground/validator/v10"
 	"github.com/bybrisk/structs"
 	"github.com/bybrisk/businessAccount-api/data"
@@ -10,7 +11,7 @@ import (
 func TestAddData(t *testing.T) {
 
 	account := &data.BusinessAccountRequest{
-		UserName: "Psy Patna",
+		UserName: "Psy Patna123",
 		Email: "user@provider.com",
 		BusinessName: "CSoL",
 		BusinessCategory: "grocery",
@@ -28,7 +29,23 @@ func TestAddData(t *testing.T) {
 	}
 
 	res:= data.AddData(account) 
+
+	fmt.Println(res)
 	if res==nil{
 		t.Fail()
 	}
 }
+
+/*func TestGetID(t *testing.T) {
+	payload:= &data.PasswordAndUsername {
+		Password : "shashank",
+		UserName : "Psy Patna",
+	}
+	res := data.GetAccountIDByUUID(payload)
+	fmt.Println(res)
+}*/
+
+/*func TestUsername(t *testing.T) {
+	res := data.IsUserPresent("Psy Patna")
+	fmt.Println(res)
+}*/

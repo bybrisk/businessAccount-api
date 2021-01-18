@@ -91,6 +91,19 @@ type BusinessAccountResponse struct{
 	DeliveryConfig structs.DeliveryConfig `json: "deliveryConfig"`
 }
 
+//getID request struct
+type PasswordAndUsername struct {
+	// Password for the account
+	//
+	// required: true
+	Password string `json: "password" validate:"required"` //custom requirement
+
+	// The Username for this account
+	//
+	// required: true
+	UserName string `json: "username" validate:"required"`
+}
+
 //post response
 type BusinessAccountPostSuccess struct {
 	BybID string `json:"bybID"`
@@ -103,6 +116,11 @@ func (d *BusinessAccountRequest) Validate() error {
 }
 
 func (d *UpdateBusinessAccountRequest) ValidateUpdateRequest() error {
+	validate := validator.New()
+	return validate.Struct(d)
+}
+
+func (d *PasswordAndUsername) ValidatePasswordAndUsernameRequest() error {
 	validate := validator.New()
 	return validate.Struct(d)
 }

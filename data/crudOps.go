@@ -6,20 +6,32 @@ func GetData (docID string) *BusinessAccountResponse {
 }
 
 func AddData (d *BusinessAccountRequest) *BusinessAccountPostSuccess{
+
+	var response BusinessAccountPostSuccess
 	//save data to database and return ID
-	id := createBusinessAccount(d)
+	if IsUserPresent(d.UserName) == false {
+		id := createBusinessAccount(d)
 
-	//get and set ProfileConfig based on Business Plan
-	res:=getProfileConfig(d)
-	_ = setProfileConfig(res,id)
+		//get and set ProfileConfig based on Business Plan
+		res:=getProfileConfig(d)
+		_ = setProfileConfig(res,id)
 
-	//set deliveryPending, deliveryDelivered, deliveryCancelled and deliveryTransit
-	_ = setDeliveryStats(id)
+		//set deliveryPending, deliveryDelivered, deliveryCancelled and deliveryTransit
+		_ = setDeliveryStats(id)
 
-	//sending response
-	var response = BusinessAccountPostSuccess{
-		BybID: id,
-		Message: "200_OK_SUCCESS",
+		//save bybID to postgreSQL
+		AddBybIDToPostgre(id,d)
+		
+		//sending response
+			response = BusinessAccountPostSuccess{
+			BybID: id,
+			Message: "200_OK_SUCCESS",
+		}
+	} else {
+			response = BusinessAccountPostSuccess{
+			BybID: "Error",
+			Message: "Username exist",
+		}
 	}
 
 	return &response
@@ -63,4 +75,24 @@ func UpdatePassword (d *UpdatePasswordRequest) *BusinessAccountPostSuccess {
 
 	return &response
 
+}
+
+func GetAccountIDByUUID(d *PasswordAndUsername) *BusinessAccountPostSuccess {
+	var response BusinessAccountPostSuccess	
+
+	id:= GetID(d)
+
+	if id==""{
+		response = BusinessAccountPostSuccess{
+			BybID: "Denied",
+			Message: "Credentials donot match",
+		}
+	} else {
+		response = BusinessAccountPostSuccess{
+			BybID: id,
+			Message: "Authenticated with BybID",
+		}
+	}
+
+	return &response
 }
