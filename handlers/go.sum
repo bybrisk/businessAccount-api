@@ -1,8 +1,8 @@
 github.com/BurntSushi/toml v0.3.1/go.mod h1:xHWCNGjB5oqiDr8zfno3MHue2Ht5sIBksp03qcyfWMU=
 github.com/aws/aws-sdk-go v1.34.28/go.mod h1:H7NKnBqNVzoTJpGfLrQkkD+ytBA93eiDYi/+8rV9s48=
-github.com/bybrisk/businessAccount-api v0.0.0-20210118090652-ea84255618c8 h1:MdWsNTplgrmw4Z/y2jH+FYh1LRCURHMCtjvTzx8Xo6w=
-github.com/bybrisk/businessAccount-api/data v0.0.0-20210118090652-ea84255618c8 h1:qtRh206Dvqm/C1mE/55gmJuqh3ttvuD0TIQnNZn4nGM=
-github.com/bybrisk/businessAccount-api/data v0.0.0-20210118090652-ea84255618c8/go.mod h1:lnNfFjJ6ME2YITADDqcCwyEyDqAzXULzd2A5XU+AvJE=
+github.com/bybrisk/businessAccount-api v0.0.0-20210118093403-60932db5e375 h1:C36aGOZXtBJ0mpAVnjazSApSaELvpC0q5th0qfehd/A=
+github.com/bybrisk/businessAccount-api/data v0.0.0-20210120143505-e4e6321537f9 h1:N+bYMThSVHaMOulBydCPW3ceWQ/jpBMyCVM+qn4mIX4=
+github.com/bybrisk/businessAccount-api/data v0.0.0-20210120143505-e4e6321537f9/go.mod h1:EtWmAsXo8YMxwM2bWGKvxvsdjfNww8MO6lnwgva4PHw=
 github.com/bybrisk/structs v0.0.0-20201109044720-899a1e012b8c/go.mod h1:+ozPcEcgRTvbDXzFyBlUTgv1G2niBpEsIzF5tySMIck=
 github.com/bybrisk/structs v0.0.0-20201207083216-d57fcf773d00/go.mod h1:Gl0qfijpVNzy02fq2+ctxg2KmXXqjYn9g/oSTLQwvR8=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
@@ -84,6 +84,8 @@ github.com/xdg/scram v0.0.0-20180814205039-7eeb5667e42c/go.mod h1:lB8K/P019DLNhe
 github.com/xdg/stringprep v0.0.0-20180714160509-73f8eece6fdc/go.mod h1:Jhud4/sHMO4oL310DaZAKk9ZaJ08SJfe+sJh0HrGL1Y=
 go.mongodb.org/mongo-driver v1.4.3/go.mod h1:WcMNYLx/IlOxLe6JRJiv2uXuCz6zBLndR4SoGjYphSc=
 go.mongodb.org/mongo-driver v1.4.4/go.mod h1:WcMNYLx/IlOxLe6JRJiv2uXuCz6zBLndR4SoGjYphSc=
+go.mongodb.org/mongo-driver v1.4.5 h1:TLtO+iD8krabXxvY1F1qpBOHgOxhLWR7XsT7kQeRmMY=
+go.mongodb.org/mongo-driver v1.4.5/go.mod h1:WcMNYLx/IlOxLe6JRJiv2uXuCz6zBLndR4SoGjYphSc=
 golang.org/x/crypto v0.0.0-20180904163835-0709b304e793/go.mod h1:6SG95UA2DQfeDnfUPMdvaQW0Q7yPrPDi9nlGo2tz2b4=
 golang.org/x/crypto v0.0.0-20190308221718-c2843e01d9a2/go.mod h1:djNgcEr1/C05ACkg1iLfiJU5Ep61QUkGW8qpdssI0+w=
 golang.org/x/crypto v0.0.0-20190422162423-af44ce270edf/go.mod h1:WFFai1msRO1wXaEeE5yQxYXgSfI8pQAWXbQop6sCtWE=
