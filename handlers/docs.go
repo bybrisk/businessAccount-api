@@ -53,6 +53,14 @@ type accountPostResponseWrapper struct {
 	Body data.BusinessAccountPostSuccess
 }
 
+// Response for the presence status of the username
+// swagger:response usernamePresenceResponse
+type accountUserPresenceWrapper struct {
+	// Boolean value for presence of username in database
+	// in: body
+	Body data.UserPresentOrNot
+}
+
 // No content is returned by this API endpoint
 // swagger:response noContentResponse
 type noContentResponseWrapper struct {

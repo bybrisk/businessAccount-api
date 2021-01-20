@@ -53,6 +53,7 @@ type BusinessAccountRequest struct{
 	// required: true
 	// example: 1, 2, 3 or 4	
 	BusinessPlan string `json: "businessplan" validate:"required"`
+
 }
 
 //post update password
@@ -108,6 +109,12 @@ type PasswordAndUsername struct {
 type BusinessAccountPostSuccess struct {
 	BybID string `json:"bybID"`
 	Message string `json:"message"`
+}
+
+type UserPresentOrNot struct {
+	// If true then username is taken else false
+	//
+	IsPresent bool `json: "isPresent"`
 }
 
 func (d *BusinessAccountRequest) Validate() error {

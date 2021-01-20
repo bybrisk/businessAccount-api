@@ -34,3 +34,8 @@ func (d *PasswordAndUsername) FromJSONToPAsswordAndUsernameStruct (r io.Reader) 
 	e := json.NewDecoder(r)
 	return e.Decode(d)
 }
+
+func (d *UserPresentOrNot) UserPresentOrNotStructToJSON (w io.Writer) error {
+	e := json.NewEncoder(w)
+	return e.Encode(d)
+}

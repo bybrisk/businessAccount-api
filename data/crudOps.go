@@ -96,3 +96,13 @@ func GetAccountIDByUUID(d *PasswordAndUsername) *BusinessAccountPostSuccess {
 
 	return &response
 }
+
+func GetAvailabilityStatus (username string) *UserPresentOrNot {
+	var status UserPresentOrNot
+
+	res := IsUserPresent(username)
+	status = UserPresentOrNot{
+		IsPresent : res,
+	}
+	return &status
+}
