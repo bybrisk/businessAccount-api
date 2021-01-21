@@ -1,8 +1,10 @@
 github.com/BurntSushi/toml v0.3.1/go.mod h1:xHWCNGjB5oqiDr8zfno3MHue2Ht5sIBksp03qcyfWMU=
 github.com/aws/aws-sdk-go v1.34.28/go.mod h1:H7NKnBqNVzoTJpGfLrQkkD+ytBA93eiDYi/+8rV9s48=
-github.com/bybrisk/businessAccount-api v0.0.0-20210118093403-60932db5e375 h1:C36aGOZXtBJ0mpAVnjazSApSaELvpC0q5th0qfehd/A=
-github.com/bybrisk/businessAccount-api/data v0.0.0-20210120143505-e4e6321537f9 h1:N+bYMThSVHaMOulBydCPW3ceWQ/jpBMyCVM+qn4mIX4=
-github.com/bybrisk/businessAccount-api/data v0.0.0-20210120143505-e4e6321537f9/go.mod h1:EtWmAsXo8YMxwM2bWGKvxvsdjfNww8MO6lnwgva4PHw=
+github.com/bybrisk/businessAccount-api v0.0.0-20210120143653-88e7b27b7498 h1:Ix8OFSb/2yk8u1DgWfAo+GcvuVQqXu4zNiyTEkfZqgc=
+github.com/bybrisk/businessAccount-api/data v0.0.0-20210120143653-88e7b27b7498 h1:UofKX2d6pyhFuQWKN+KqjOToMxQ4f66bUNDkMT1Lgd8=
+github.com/bybrisk/businessAccount-api/data v0.0.0-20210120143653-88e7b27b7498/go.mod h1:EtWmAsXo8YMxwM2bWGKvxvsdjfNww8MO6lnwgva4PHw=
+github.com/bybrisk/businessAccount-api/data v0.0.0-20210121074120-4b3f9e5e3d55 h1:2Ob+yfohgwiO1WFGwmRQbW+AxQ47/3U4VvHzOdSigEw=
+github.com/bybrisk/businessAccount-api/data v0.0.0-20210121074120-4b3f9e5e3d55/go.mod h1:EtWmAsXo8YMxwM2bWGKvxvsdjfNww8MO6lnwgva4PHw=
 github.com/bybrisk/structs v0.0.0-20201109044720-899a1e012b8c/go.mod h1:+ozPcEcgRTvbDXzFyBlUTgv1G2niBpEsIzF5tySMIck=
 github.com/bybrisk/structs v0.0.0-20201207083216-d57fcf773d00/go.mod h1:Gl0qfijpVNzy02fq2+ctxg2KmXXqjYn9g/oSTLQwvR8=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
