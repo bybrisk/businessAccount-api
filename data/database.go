@@ -2,6 +2,7 @@ package data
 
 import (
 	"fmt"
+	"os"
 	"github.com/bybrisk/structs"
 	"go.mongodb.org/mongo-driver/bson"
 	"github.com/shashank404error/shashankMongo"
@@ -141,8 +142,12 @@ func GetID(d *PasswordAndUsername) string {
 	var accountID string
 
 	//db connection
-	psqlInfo := fmt.Sprintf("host=%s port=%d user=%s "+"password=%s dbname=%s sslmode=disable",host, port, user, password, dbname)
-	db, err := sql.Open("postgres", psqlInfo)
+	/*psqlInfo := fmt.Sprintf("host=%s port=%d user=%s "+"password=%s dbname=%s sslmode=disable",host, port, user, password, dbname)
+	db, err := sql.Open("postgres", psqlInfo)*/
+
+	//only used with heroku
+	db, err := sql.Open("postgres", os.Getenv("DATABASE_URL"))
+
 	if err != nil {
 		log.Error("Postgre Database connection open() ERROR:")
 		log.Error(err)
@@ -164,8 +169,12 @@ func GetID(d *PasswordAndUsername) string {
 
 func AddBybIDToPostgre (id string,d *BusinessAccountRequest) {
 
-	psqlInfo := fmt.Sprintf("host=%s port=%d user=%s "+"password=%s dbname=%s sslmode=disable",host, port, user, password, dbname)
-	db, err := sql.Open("postgres", psqlInfo)
+	/*psqlInfo := fmt.Sprintf("host=%s port=%d user=%s "+"password=%s dbname=%s sslmode=disable",host, port, user, password, dbname)
+	db, err := sql.Open("postgres", psqlInfo)*/
+
+	//only used with heroku
+	db, err := sql.Open("postgres", os.Getenv("DATABASE_URL"))
+	
 	if err != nil {
 		log.Error("Postgre Database connection open() ERROR:")
 		log.Error(err)
@@ -187,8 +196,12 @@ func AddBybIDToPostgre (id string,d *BusinessAccountRequest) {
 func IsUserPresent(username string) bool {
 
 	var isPresent bool
-	psqlInfo := fmt.Sprintf("host=%s port=%d user=%s "+"password=%s dbname=%s sslmode=disable",host, port, user, password, dbname)
-	db, err := sql.Open("postgres", psqlInfo)
+	/*psqlInfo := fmt.Sprintf("host=%s port=%d user=%s "+"password=%s dbname=%s sslmode=disable",host, port, user, password, dbname)
+	db, err := sql.Open("postgres", psqlInfo)*/
+	
+	//only used with heroku
+	db, err := sql.Open("postgres", os.Getenv("DATABASE_URL"))
+	
 	if err != nil {
 		log.Error("Postgre Database connection open() ERROR:")
 		log.Error(err)

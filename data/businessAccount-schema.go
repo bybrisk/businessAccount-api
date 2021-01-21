@@ -43,10 +43,22 @@ type BusinessAccountRequest struct{
 	// required: true
 	// max length: 10000
 	Address string `json: "address" validate:"required"`
+
+	// Specify the latitude of the drop point (through your application) 
+	//
+	// required: true
+	Latitude float64 `json:"latitude" validate:"required"`
+	
+	// Specify the longitude of the drop point (through your application) 
+	//
+	// required: true
+	Longitude float64 `json:"longitude" validate:"required"`
+
 	// Type of delivery the business requires
 	//
 	// required: true
 	// example: Self Delivery or Bybrisk Delivery
+	
 	DeliveryConfig structs.DeliveryConfig `json: "deliveryConfig" validate:"required"`
 	// Business plan ID
 	//
