@@ -123,6 +123,11 @@ type BusinessAccountPostSuccess struct {
 	Message string `json:"message"`
 }
 
+type ClusterIDArray struct {
+	ClusterID []string `json:"clusterID"`
+	BybID string `json:"bybID"`
+}
+
 type UserPresentOrNot struct {
 	// If true then username is taken else false
 	//

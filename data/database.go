@@ -218,3 +218,23 @@ func IsUserPresent(username string) bool {
 
 	return isPresent
 }
+
+func CreateClusterDocument(docID string) string{
+	var stringArr ClusterIDArray
+	stringArr=ClusterIDArray{
+		BybID:docID,
+	}
+	collectionName := shashankMongo.DatabaseName.Collection("cluster")
+	result, insertErr := collectionName.InsertOne(shashankMongo.CtxForDB, stringArr)
+	if insertErr != nil {
+		log.Error("CreateClusterDocument ERROR:")
+		log.Error(insertErr)
+	} else {
+		fmt.Println("CreateClusterDocument() API result:", result)
+
+		newID := result.InsertedID
+		fmt.Println("CreateClusterDocument() newID:", newID)
+		resultID = newID.(primitive.ObjectID).Hex()
+	}
+	return resultID
+}

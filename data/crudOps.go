@@ -11,6 +11,7 @@ func AddData (d *BusinessAccountRequest) *BusinessAccountPostSuccess{
 	//save data to database and return ID
 	if IsUserPresent(d.UserName) == false {
 		id := createBusinessAccount(d)
+		_=CreateClusterDocument(id)
 
 		//get and set ProfileConfig based on Business Plan
 		res:=getProfileConfig(d)
