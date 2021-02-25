@@ -4,15 +4,15 @@ import (
 	"testing"
 	"fmt"
 	//"github.com/go-playground/validator/v10"
-    "github.com/bybrisk/structs"
+    //"github.com/bybrisk/structs"
 	"github.com/bybrisk/businessAccount-api/data"
 )
 
-func TestAddData(t *testing.T) {
+/*func TestAddData(t *testing.T) {
 
 	account := &data.BusinessAccountRequest{
-		UserName: "User Cluster12",
-		Email: "user@provider.com",
+		UserName: "VrajMilk",
+		Email: "shashank@provider.com",
 		BusinessName: "CSoL",
 		BusinessCategory: "grocery",
 		Password: "shashank",
@@ -26,6 +26,8 @@ func TestAddData(t *testing.T) {
 		},
 		BusinessPlan: "1",
 		PicURL: "img/pic.jpg",
+		Latitude: 22.784793,
+		Longitude:77.8382493,
 	}
 
 	res:= data.AddData(account) 
@@ -34,21 +36,21 @@ func TestAddData(t *testing.T) {
 	if res==nil{
 		t.Fail()
 	}
-}
+}*/
 
 /*func TestGetID(t *testing.T) {
 	payload:= &data.PasswordAndUsername {
 		Password : "shashank",
-		UserName : "Psy Patna",
+		UserName : "VrajMilk",
 	}
 	res := data.GetAccountIDByUUID(payload)
 	fmt.Println(res)
 }*/
 
-/*func TestUsername(t *testing.T) {
-	res := data.IsUserPresent("Psy Patna")
+func TestUsername(t *testing.T) {
+	res := data.IsUserPresent("VrajMilk")
 	fmt.Println(res)
-}*/
+}
 
 /*func TestUserPresentOrNot (t *testing.T) {
 	res := data.GetAvailabilityStatus("shashank2")

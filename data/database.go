@@ -2,7 +2,6 @@ package data
 
 import (
 	"fmt"
-	"os"
 	"github.com/bybrisk/structs"
 	"go.mongodb.org/mongo-driver/bson"
 	"github.com/shashank404error/shashankMongo"
@@ -15,11 +14,11 @@ import (
 var resultID string
 
 const (
-	host     = "krayfin-account.crj7mn4hpxlk.us-west-2.rds.amazonaws.com"
-	port     = 5433
-	user     = "krayfin"
-	password = "J9bv3rdnrvwY00Y3sER4"
-	dbname   = "accountID"
+	host     = "arjuna.db.elephantsql.com"
+	port     = 5432
+	user     = "adypejae"
+	password = "yq8yuFQvGnynPwzjZMbFdfQyV2sa5HFm"
+	dbname   = "adypejae"
   )
 
 //Database Funcs
@@ -142,11 +141,11 @@ func GetID(d *PasswordAndUsername) string {
 	var accountID string
 
 	//db connection
-	/*psqlInfo := fmt.Sprintf("host=%s port=%d user=%s "+"password=%s dbname=%s sslmode=disable",host, port, user, password, dbname)
-	db, err := sql.Open("postgres", psqlInfo)*/
+	psqlInfo := fmt.Sprintf("host=%s port=%d user=%s "+"password=%s dbname=%s sslmode=disable",host, port, user, password, dbname)
+	db, err := sql.Open("postgres", psqlInfo)
 
 	//only used with heroku
-	db, err := sql.Open("postgres", os.Getenv("DATABASE_URL"))
+	//db, err := sql.Open("postgres", os.Getenv("DATABASE_URL"))
 
 	if err != nil {
 		log.Error("Postgre Database connection open() ERROR:")
@@ -169,11 +168,11 @@ func GetID(d *PasswordAndUsername) string {
 
 func AddBybIDToPostgre (id string,d *BusinessAccountRequest) {
 
-	/*psqlInfo := fmt.Sprintf("host=%s port=%d user=%s "+"password=%s dbname=%s sslmode=disable",host, port, user, password, dbname)
-	db, err := sql.Open("postgres", psqlInfo)*/
+	psqlInfo := fmt.Sprintf("host=%s port=%d user=%s "+"password=%s dbname=%s sslmode=disable",host, port, user, password, dbname)
+	db, err := sql.Open("postgres", psqlInfo)
 
 	//only used with heroku
-	db, err := sql.Open("postgres", os.Getenv("DATABASE_URL"))
+	//db, err := sql.Open("postgres", os.Getenv("DATABASE_URL"))
 	
 	if err != nil {
 		log.Error("Postgre Database connection open() ERROR:")
@@ -196,11 +195,11 @@ func AddBybIDToPostgre (id string,d *BusinessAccountRequest) {
 func IsUserPresent(username string) bool {
 
 	var isPresent bool
-	/*psqlInfo := fmt.Sprintf("host=%s port=%d user=%s "+"password=%s dbname=%s sslmode=disable",host, port, user, password, dbname)
-	db, err := sql.Open("postgres", psqlInfo)*/
+	psqlInfo := fmt.Sprintf("host=%s port=%d user=%s "+"password=%s dbname=%s sslmode=disable",host, port, user, password, dbname)
+	db, err := sql.Open("postgres", psqlInfo)
 	
 	//only used with heroku
-	db, err := sql.Open("postgres", os.Getenv("DATABASE_URL"))
+	//db, err := sql.Open("postgres", os.Getenv("DATABASE_URL"))
 	
 	if err != nil {
 		log.Error("Postgre Database connection open() ERROR:")
