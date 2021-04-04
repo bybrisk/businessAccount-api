@@ -66,6 +66,11 @@ type BusinessAccountRequest struct{
 	// example: 1, 2, 3 or 4	
 	BusinessPlan string `json: "businessplan" validate:"required"`
 
+	// Time (in seconds) a business spends on a regular customer to process after delivery
+	//
+	// required: false
+	StandbyDuration int64 `json: "standbyDuration"`
+
 }
 
 //post update password
@@ -84,6 +89,7 @@ type UpdateBusinessAccountRequest struct{
 	BusinessName string `json: "businessname" validate:"required"`
 	Address string `json: "address" validate:"required"`
 	DeliveryConfig structs.DeliveryConfig `json: "deliveryConfig" validate:"required"`
+	StandbyDuration int64 `json: "standbyDuration" validate:"required"`
 }
 
 //get response

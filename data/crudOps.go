@@ -10,6 +10,7 @@ func AddData (d *BusinessAccountRequest) *BusinessAccountPostSuccess{
 	var response BusinessAccountPostSuccess
 	//save data to database and return ID
 	if IsUserPresent(d.UserName) == false {
+		d.StandbyDuration = 180
 		id := createBusinessAccount(d)
 		_=CreateClusterDocument(id)
 
