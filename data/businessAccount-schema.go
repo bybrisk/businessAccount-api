@@ -94,20 +94,53 @@ type UpdateBusinessAccountRequest struct{
 
 //get response
 type BusinessAccountResponse struct{
+	//url of the profile pic of the business
+	//
 	PicURL string `json: "picurl"`
+
+	//Unique username of the business
+	//
 	UserName string `json: "username"`
+
+	//Email of the business
+	//
 	Email string `json: "email"`
+
+	//Name of the Business
+	//
 	BusinessName string `json: "businessname"`
+
+	//Category of the business
+	//
 	BusinessCategory string `json: "businessCat"`
+
+	//Address of the depot
+	//
 	Address string `json: "address"`
+	
+	// Business plan configuration
+	//
 	BusinessPlan string `json: "businessplan"`
+
+	//Profile Configuration
+	//
 	ProfileConfig structs.ProfileConfig `json:"profileConfiguration"`
-	DeliveryPending string `json: "deliveryPending"`
-	DeliveryDelivered string `json: "deliveryDelivered"`
-	DeliveryCancelled string `json: "deliveryCancelled"`
-	DeliveryTransit string `json: "deliveryTransit"`
-	UserID string `json:"bybID"`
+
+	//bybID of the business
+	//
+	BybID string `json:"bybID"`
+
+	//Delivery Configuration
+	//
 	DeliveryConfig structs.DeliveryConfig `json: "deliveryConfig"`
+	
+	// Latitude of the depot 
+	//
+	Latitude float64 `json:"latitude"`
+	
+	// Longitude of the depot
+	//
+	Longitude float64 `json:"longitude"`
 }
 
 //getID request struct

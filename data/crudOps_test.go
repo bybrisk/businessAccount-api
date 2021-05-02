@@ -4,11 +4,11 @@ import (
 	"testing"
 	"fmt"
 	//"github.com/go-playground/validator/v10"
-    "github.com/bybrisk/structs"
+    //"github.com/bybrisk/structs"
 	"github.com/bybrisk/businessAccount-api/data"
 )
 
-func TestAddData(t *testing.T) {
+/*func TestAddData(t *testing.T) {
 
 	account := &data.BusinessAccountRequest{
 		UserName: "TestForDuration",
@@ -36,7 +36,7 @@ func TestAddData(t *testing.T) {
 	if res==nil{
 		t.Fail()
 	}
-}
+}*/
 
 /*func TestGetID(t *testing.T) {
 	payload:= &data.PasswordAndUsername {
@@ -56,3 +56,8 @@ func TestAddData(t *testing.T) {
 	res := data.GetAvailabilityStatus("shashank2")
 	fmt.Println(res)
 }*/
+
+func TestGetData(t *testing.T) {
+	res:= data.GetData("6038bd0fc35e3b8e8bd9f81a")
+	fmt.Println(res)
+}
